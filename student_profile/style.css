@@ -1,0 +1,70 @@
+/*test as much as you can while staying away from overly complex code. Think macros!*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+
+}
+
+header {
+	padding: 20px;
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	background: black;
+}
+
+#name {
+	float: left;
+	width: 50%;
+	color: black;
+	background: #eee;
+	text-align: left;
+	text-indent: 40px;
+	overflow: auto;
+}
+
+#contact {
+	float: right;
+	width: 50%;
+	color: black;
+	text-align: left;
+	text-indent: 70px;
+	background: #eee;
+	overflow: auto;
+}
+
+#content {
+	width: 100%;
+	overflow: auto;
+	background: #eee;
+}
+
+#image {
+	float: left;
+	margin-left: 40px;
+	height: 200px;
+	width: 200px;
+}
+
+#text1 {
+	float: left;
+	width: 25%;
+	padding-left: 40px;
+	padding-right: 40px;	
+}
+
+#list {
+	float: right;
+	width: 45%;
+	margin: 0px;
+}
+
+footer {
+	background: #eee;
+	clear: both;
+	padding: 40px;
+}

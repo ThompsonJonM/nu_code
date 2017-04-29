@@ -1,0 +1,4 @@
+Utilize this txt doc to maintain in-depth revision history
+
+20170429 1534 Created JMT
+

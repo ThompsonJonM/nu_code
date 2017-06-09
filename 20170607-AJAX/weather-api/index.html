@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather API Test</title>
+</head>
+<body>
+	<h1>Bujumbura Weather Details</h1>
+
+	<hr>
+
+	<h3>Wind Speed: <span id="windSpeedText"></span></h3>
+	<h3>Humidity: <span id="humidityText"></span></h3>
+	<h3>Temperature (F): <span id="tempText"></span></h3>
+
+<!-- jQuery CDN -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<!-- JavaScript -->
+<script type="text/javascript">
+	// This is our API key
+    var APIKey = "bd5e378503939ddaee76f12ad7a97608";
+
+    // Here we are building the URL we need to query the database
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?" +
+      "q=Bujumbura,Burundi&units=imperial&appid=" + APIKey;
+
+    // Here we run our AJAX call to the OpenWeatherMap API
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+      // We store all of the retrieved data inside of an object called "response"
+      .done(function(response) {
+
+        // Log the queryURL
+        console.log(queryURL);
+
+        // Log the resulting object
+        console.log(response);
+
+        // Transfer content to HTML
+        $("#windSpeedText").html(response.wind.speed);
+        $("#humidityText").html(response.main.humidity);
+        $("#tempText").html(response.main.temp);
+
+        // Log the data in the console as well
+        console.log("Wind Speed: " + response.wind.speed);
+        console.log("Humidity: " + response.main.humidity);
+        console.log("Temperature (F): " + response.main.temp);
+      });
+</script>
+</body>
+</html>

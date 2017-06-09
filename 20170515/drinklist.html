@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Content!</title>
+</head>
+<body>
+
+  <h1>Drink Selection!</h1>
+  <hr>
+
+  <!-- Here we create a generic empty div -->
+  <div id="empty-div"></div>
+
+  <script type="text/javascript">
+
+    // Array holds all of the drinks available
+    var drinkList = ['pepsi', 'grape crush', 'diet coke', 'water'];
+
+    //grab the empty div first
+    var emptyDiv = document.getElementById('empty-div');
+
+    //create an unordered list which will be manipulated later
+    var ul = document.createElement('ul');
+
+    //create a for loop that goes through each element
+    for (var i = 0; i < drinkList.length; i++) {
+
+      //create a variable populated by the various indexes found
+      //within the drinkList array
+      var drink = drinkList[i];
+    
+      //create a list element for each drink which will add to
+      //the previously created ul
+      var li = document.createElement('li');
+
+      //manipulate the list item within the HTML with the previous
+      //variable that has been populated by the drinkList array
+      li.innerHTML = drink;
+
+      //append the unordered list with the new list item
+      ul.appendChild(li)
+    };
+
+    //port the unordered list to the "empty-div" HTML element
+    emptyDiv.appendChild(ul);
+
+  </script>
+
+</body>
+</html>

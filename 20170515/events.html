@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Listeners</title>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+	<h3 id="click-me">CLICK ME!</h3>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+
+			$("#click-me").on('click', function(event) {
+				prompt("Did you click me?");
+			});
+		});
+
+	</script>
+
+</body>
+</html>

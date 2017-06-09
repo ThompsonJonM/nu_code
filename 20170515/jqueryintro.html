@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic jQuery Dump</title>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+	<div id="empty-div"></div>
+
+	<style>
+		.fancy {
+			font-size: 100px;
+			color: green;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+	// var ul = $('<ul>');
+
+	// for (var i = 0; i < drinkList.length; i++) {
+
+	// 	//creates variable li as html 
+	// 	var li = $('<li>').html(drinkList[i]);
+	// 	ul.append(li);
+	// };
+
+	// $("empty-div").append(ul);
+		
+	$("#empty-div").html("<h1>Hello friends!</h1>");
+
+	var newDiv = $("<div>");
+	same as document.createElement('div');
+
+	newDiv.html("A pleasure to meet you!");
+
+
+	$("#empty-div").append(newDiv);
+
+	newDiv.attr("class", "fancy");
+
+	</script>
+
+</body>
+</html>

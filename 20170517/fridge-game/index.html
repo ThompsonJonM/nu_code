@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Doc Please Ignore</title>
+	
+</head>
+<body>
+	<div id="buttons">
+			
+	</div>
+
+		<script type="text/javascript">
+			
+		var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+        	'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+        	't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+  		var buttons = function () {
+  			myButtons = document.getElementById('buttons');
+  			letters = document.createElement('ul');
+
+  			for (var i = 0; i < alphabet.length; i++) {
+  				letters.id = 'alphabet';
+  				list = document.createElement('li');
+  				list.id = 'letter';
+  				list.innerHTML = alphabet[i];
+  				// check();
+  				myButtons.appendChild(letters);
+  				letters.appendChild(list);
+  			}
+  		}
+
+  		buttons();
+
+		</script>
+
+		<style type="text/css">
+			
+			#alphabet {
+ 			margin: 15px auto;
+ 			padding: 0;
+ 			max-width: 900px;
+ 			text-align: center;
+			}
+			
+			#alphabet:after {
+  			content: "";
+  			display: table;
+  			clear: both;
+			}
+
+			#alphabet li {
+  			float: left;
+  			margin: 0 10px 10px 0;
+		  	list-style: none;
+		  	width: 35px;
+		  	height: 30px;
+		  	padding-top: 10px;
+		  	background: #cccccc;
+		  	color: #006699;
+		  	font-size: 18px;
+		  	cursor: pointer;
+		  	-moz-border-radius: 5px;
+		  	-webkit-border-radius: 5px;
+		  	border-radius: 5px;
+		  	-khtml-border-radius: 5px;
+		  	border: solid 1px #fff;
+			}
+
+			#alphabet li:hover {
+  			background: #c1d72e;
+  			border: solid 1px #fff;
+  			color: #fff;
+			}
+
+		</style>
+</body>
+</html>

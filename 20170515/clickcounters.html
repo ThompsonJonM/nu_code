@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Click Counters</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+
+  <h1>Click to Eat Sandwich</h1>
+  <h3 id="pbj">Peanut Butter Jelly</h3>
+  <h3 id="grillcheese">Grilled Cheese</h3>
+  <h3 id="roastbeef">Roast Beef</h3>
+
+<!-- three divs (one for each sandwhich) separated by hrs -->
+  <div id="pbjcounter"></div>
+  <hr>
+  <div id="cheesecounter"></div>
+  <hr>
+  <div id="beefcounter"></div>
+  <hr>
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      //variable for # of pbj clicks
+      var pbjcount = 0;
+
+      //variable for # of grilled cheese clicks
+      var cheesecount = 0;
+
+      //variable for # of beef clicks
+      var beefcount = 0;
+
+      //takes the pbj variable, adds a click function, and writes into an 
+      //html div (pbjcounter) with the current number of clicks
+      //also creates an alert stating what sandwhich you ate
+        $("#pbj").on('click', function() {
+
+          //takes the current count of pbjcount (0) and adds
+          //incrementally to the number (0+1 = 1 +1 = 2 +1 = 3 etc.)
+          pbjcount++;
+
+          //writes current count to div element pbjcounter
+          $("#pbjcounter").html("PBJs currently eaten: "+pbjcount);
+
+          //sends browser alert of the click action
+          alert("You've eaten a pb&j!");
+        });
+
+        //same as above but for grilled cheese
+        $("#grillcheese").on('click', function() {
+          cheesecount++;
+          $("#cheesecounter").html("Grilled Cheeses currently eaten: "+cheesecount);
+        alert("You've eaten a grilled cheese!");
+        });
+
+        //same as above but for roast beef
+        $("#roastbeef").on('click', function() {
+          beefcount++;
+          $("#beefcounter").html("Beefs currently eaten: "+beefcount);
+        alert("You've eaten a roast beef sandwhich!");
+        });
+    });
+
+  </script>
+
+</body>
+
+</html>

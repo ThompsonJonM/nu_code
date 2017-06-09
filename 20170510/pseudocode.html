@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pseudo Code Exercise</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+	// create 3 variables; rock, paper, scissor
+	// define the number of players / each player
+	// define the rules
+	// get user input (via prompts)
+	// check user actions with (if/else/then)
+	// declare the winner
+	// display the results
+
+	//game variables
+	var rock = "rock";
+	var paper = "paper";
+	var scissors = "scissors";
+
+	//player variables
+	var playerOne = "playerOne";
+	var playerTwo = "playerTwo";
+
+	//player inputs
+	var playerOneInput = prompt("Player One: Pick Rock, Paper, or Scissors");
+	var playerTwoInput = prompt("Player Two: Pick Rock, Paper, or Scissors");
+
+	playerOneInput = playerOneInput.toLowerCase();
+	playerTwoInput = playerTwoInput.toLowerCase();
+
+	//conditionals
+	// if ((playerOneInput == rock) && (playerTwoInput == scissors)) {
+	// 	alert("Player One Wins, Press F5 to Play Again")
+	// }
+
+	// else if ((playerOneInput == rock) && (playerTwoInput == paper)) {
+	// 	alert("Player Two Wins, Press F5 to Play Again")
+	// }
+
+	// else if ((playerOneInput == paper) && (playerTwoInput == rock)) {
+	// 	alert("Player One Wins, Press F5 to Play Again")
+	// }
+
+	// else if ((playerOneInput == paper) && (playerTwoInput == scissors)) {
+	// 	alert("Player Two Wins, Press F5 to Play Again")
+	// }
+
+	// else if ((playerOneInput == scissors) && (playerTwoInput == paper)) {
+	// 	alert("Player One Wins, Press F5 to Play Again")
+	// }
+
+	// else if ((playerOneInput == scissors) && (playerTwoInput == rock)) {
+	// 	alert("Player Two Wins, Press F5 to Play Again")
+	// }
+
+	// else if ((playerOneInput == playerTwoInput)) {
+	// 	alert("Draw, Press F5 to Play Again")
+	// }
+
+	var choiceCombo = playerOneInput + playerTwoInput;
+
+	if (choiceCombo === "rockscissors" || choiceCombo === "scissorspaper" || choiceCombo === "paperrock") {
+		alert("Player One Wins, Press F5 to Play Again")
+	} 
+
+	else if (choiceCombo === "rockpaper" || choiceCombo === "paperscissors" || choiceCombo === "scissorsrock") {
+		alert("Player Two Wins, Press F5 to Play Again")
+	} 
+
+	else if (choiceCombo === "rockrock" || choiceCombo === "scissorsscissors" || choiceCombo === "paperpaper") {
+		alert("Draw, Press F5 to Play Again")
+	} 
+
+	else {
+		alert("Wrong Input, Try Again")
+	}
+	
+	</script>
+
+<!-- 
+
+	* display on the left side liberal news
+		- order the news based on time
+	* display on the right side conservative news
+		- order the news based on time
+
+	<div class="conservative-section">
+		list all conservative news by time
+	</div>
+
+ -->
+
+</body>
+</html>

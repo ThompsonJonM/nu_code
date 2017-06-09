@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This Example</title>
+</head>
+<body>
+
+	<h1>Make sure to view the console to see the action!</h1>
+
+	<script type="text/javascript">
+		
+	//example one
+	//what will "this" print?
+	console.log(this); //output window which is specifically global
+
+	//example two
+	//what is "this" going to print?
+	function myFunction() {
+		console.log(this); //refers to the global because there is nothing to the left of the function execute below
+	}
+	myFunction();
+
+	var someObj = {
+		name: "Red Hat",
+		say: function() {
+			console.log(this.name);
+		}
+	};
+	someObj();
+
+	
+
+	</script>
+
+</body>
+</html>

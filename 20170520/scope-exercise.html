@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>lexicalScope</title>
+</head>
+<body>
+
+  <script type="text/javascript">
+
+    // Run this program. Then turn to the person next to you and answer the following questions:
+    // 1. What is the difference (in output) between Situation 1 and Situation 2?
+    // 2. Why are the alert messages different? (Hint: Look for syntax differences)
+
+    // Situation 1
+    // ------------------------------------------
+    
+    //Global Scope
+    var myVar1 = 1;
+
+    //function below is global
+    function a1() {
+      myVar1 = 5 - 3;
+
+      //this is when b1() is executed, NOT below
+      b1();
+      alert("Q1 | a: " + myVar1);
+    }
+
+    //function below is global
+    function b1() {
+      alert("Q1 | b: " + myVar1);
+    }
+
+    //this is when a1() is executed, NOT above
+    a1();
+
+
+    // Situation 2
+    // ------------------------------------------
+
+    //Local Scope
+    var myVar2 = 1;
+
+    //function below is global
+    function a2() {
+
+    	//variable below is within function a2(), therefore local scope
+      var myVar2 = 5 - 3;
+
+      //this is when b2() is executed
+      b2();
+      alert("Q2 | a: " + myVar2);
+    }
+
+    //function below is global
+    function b2() {
+      alert("Q2 | b: " + myVar2);
+    }
+
+    //this is when a2() is executed
+    a2();
+
+  </script>
+</body>
+</html>

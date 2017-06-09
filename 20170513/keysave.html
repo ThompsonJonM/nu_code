@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+
+	document.onkeyup = function(e) {
+		
+		var letter = String;
+		letter.fromCharCode(event.keyCode);
+		letter.toLowerCase();
+
+		if (letter === 'h') {
+			car.honk();
+			reWriteStats();
+		}
+	};
+	
+	</script>
+
+</body>
+</html>

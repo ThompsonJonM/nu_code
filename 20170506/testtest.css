@@ -1,0 +1,16 @@
+.navbar-nav {
+	float: right;
+}
+
+h4 {
+	float: left;
+	padding: 10px;
+}
+
+.col-md-1 {
+	width: 50%;
+}
+
+.col-xs-6 {
+	width: 50%;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Asynchronous JS and XML Test</title>
+</head>
+<body>
+	<h1>The Magnificent Movie App</h1>
+
+	<hr>
+
+	<h3>Movie Title: <span id="movieTitle"></span></h3>
+	<h3>Year: <span id="releaseDate"></span></h3>
+	<h3>Actors: <span id="movieActors"></span></h3>
+	<h3>Plot Summary: <span id="plotSummary"></span></h3>
+
+<!-- jQuery CDN -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<!-- JavaScript -->
+<script type="text/javascript">
+
+	// // turns the ajax into a function call for timeout below
+	// var pullData = function(){
+	// 	$.ajax('http://www.omdbapi.com/?apikey=40e9cece&i=tt0451279')
+	// 	.done(function (data){
+	// 		if (data.Response === "False") {
+	// 			alert('There was no movie data found');
+	// 		} else {
+	// 			$('#movieTitle').html(data.Title);
+	// 			$('#releaseDate').html(data.Year);
+	// 			$('#movieActors').html(data.Actors);
+	// 			$('#plotSummary').html(data.Plot);
+	// 		}
+	// 	});
+	// }
+
+	// // timeout set to execute function in xx seconds
+	// setTimeout(pullData, 5000);
+
+	// interval
+	var imdbId = 451279;
+
+	var intervalData = function() {
+
+		$.ajax('http://www.omdbapi.com/?apikey=40e9cece&i=tt0' +(imdbId++))
+		.done(function (data){
+			if (data.Response === "False") {
+				alert('There was no movie data found');
+			} else {
+				$('#movieTitle').html(data.Title);
+				$('#releaseDate').html(data.Year);
+				$('#movieActors').html(data.Actors);
+				$('#plotSummary').html(data.Plot);
+			}
+		});
+	}
+
+	// interval set
+	setInterval(intervalData, 1000);
+
+		
+</script>
+
+</body>
+</html>

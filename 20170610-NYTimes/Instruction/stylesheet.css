@@ -1,0 +1,45 @@
+/*Global IDs*/
+
+header {
+	text-align: center;
+	font-weight: bold;
+	padding: 30px 0 0 0;
+	height: 125px;
+	background-image: url(./backgroundImage.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 250px 500px;
+}
+
+footer {
+	text-align: center;
+	padding: 30px 0 0 0;
+	font-weight: bold;
+	height: 125px;
+}
+
+/*Classes*/
+
+.row {
+	padding: 15px 0 15px 0;
+}
+
+/*Individual IDs*/
+
+#primaryArticle {
+	height: 300px;
+	overflow-y: auto;
+}	
+
+#secondaryArticle {
+	height:300px;
+	overflow-y: auto;
+}
+
+#tertiaryArticle {
+	height:300px;
+	overflow-y: auto;
+}
+
+/*Media Queries*/
+

@@ -1,0 +1,14 @@
+var list = JSON.parse(localStorage.getItem("todoList"));
+
+if (!Array.isArray(list)) {
+	list = [];
+}
+
+function putOnPage() {
+	$("#todo-list").empty(); //empties html
+
+	var insideList = JSON.parse(localStorage.getItem("todolist"));
+
+	//checks to see if we have to dos
+	
+}

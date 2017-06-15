@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase Practice</title>
+</head>
+<body>
+
+  <h3 id="username">The username is: </h3>
+  <input id="usernameInput">
+  <input id="emailInput">
+  <input id="milkshakeInput">
+  <button id="saveUserInput">Save it!</button>
+
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB7004Ji179vzcCZMJoKD4eh5vy5eOlqAM",
+    authDomain: "thompsonjonm-db.firebaseapp.com",
+    databaseURL: "https://thompsonjonm-db.firebaseio.com",
+    projectId: "thompsonjonm-db",
+    storageBucket: "thompsonjonm-db.appspot.com",
+    messagingSenderId: "277907133668"
+  };
+
+  //Initializing firebase db
+  firebase.initializeApp(config);
+
+  //create a firebase db reference in order to call database info within the code
+  var database = firebase.database();
+  console.log(database);
+
+  document.getElementById("saveUserInput").onclick = function() {
+    var username = document.getElementById("usernameInput").value;
+
+    var email = document.getElementById("emailInput").value;
+
+    var milkshake = document.getElementById("milkshakeInput").value;
+
+    // console.log("Making sure that this works" + username + password);
+
+    database.ref(/* location in db*/).set({
+      username: username,
+      email: email,
+      milkshakeflavor: milkshake
+    });
+  }
+
+  database.ref().on("value", function (snapshot) {
+    console.log(snapshot.val());
+  });
+
+</script>
+
+</body>
+</html>

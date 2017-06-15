@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NYTimes API App</title>
+
+	<!-- Reset -->
+	<link rel="stylesheet" type="text/css" href="./assets/style/reset.css">
+
+	<!-- Styling -->
+	<link rel="stylesheet" type="text/css" href="./stylesheet.css">
+
+	<!-- Bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 headerDiv">
+					<h1>NYTimes Search App</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<form id="textInput">
+					<div class="row">
+						<div class="col-lg-4">
+							<label for="searchTerm">Search Term</label>
+							<input type="text" id="searchTermInput">
+							<br>
+						</div>
+
+						<div class="col-lg-4">
+							<label for="subSectionTerm">Sub-Section</label>
+							<input type="text" id="subSectionInput">
+							<br>
+						</div>
+
+						<div class="col-lg-4">
+							<label for="yearTerm">Year Published</label>
+							<input type="text" id="yearInput">
+							<br>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-4 col-lg-offset-2">
+							<input id="add-movie" type="submit" value="Search">
+						</div>
+
+						<div class="col-lg-4 col-lg-offset-2">
+							<input id="add-movie" type="submit" value="Clear Results">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div id="primaryArticle">
+					Lorem ipsum dolor sit amet, mei utamur petentium cu. Vero tantas aeterno in eum, ne pro dico indoctum. Meis malis error per in, cibo dissentias ea vis. Ludus nihil his ne, dicunt tractatos ei mea. Has te tale scribentur.
+
+					Ei mucius facete quaeque mea, te nec suas tamquam deserunt. Ius an dolor legere phaedrum, ius summo mnesarchum ei. Sale velit dicant in vis, falli possim commodo vix ea. Vis dicant delicata ne, mea detracto noluisse cu, fuisset scaevola ex vis. Solum suscipit conceptam pro ei, his at aliquam mentitum pertinacia, ad gloriatur mediocritatem mel. Brute clita luptatum eam id, sint augue copiosae ex vim. Deserunt scriptorem te qui, ei lobortis delicatissimi mel, aliquam ponderum honestatis cu vel.
+
+					Ea purto affert percipit vis, decore dignissim liberavisse ad est, te vim tation lucilius. His at nibh errem, ea duo velit indoctum periculis. At consul dissentiet consectetuer eam. Dolorum scribentur efficiantur pro an, ei modo constituto vim. Ex harum mandamus expetenda sea, solet cetero qui te.
+
+					Choro facilis sensibus eu quo, te hinc error vix, ex paulo detracto verterem qui. Ei ullum euismod mel, ludus vitae prompta ad vim. Omnes mucius ocurreret an sit, sit nostro incorrupte an, sed dicam legimus at. Purto salutandi vix no, fugit praesent nec cu. Quot animal ea mei.
+
+					Nam omnis prima ei, mea inermis vocibus ei. Cum veritus explicari an, habeo scripta aliquam in vel, simul verterem recteque no mei. No pro wisi constituam, ex vel legere vocibus postulant. Usu ea ubique intellegat, ei mei propriae constituto, no sea odio inani vituperatoribus. Has epicuri liberavisse no.
+				</div>
+			</div>
+
+			<div class="col-lg-3">
+				<div id="secondaryArticle">
+					Lorem ipsum dolor sit amet, mei utamur petentium cu. Vero tantas aeterno in eum, ne pro dico indoctum. Meis malis error per in, cibo dissentias ea vis. Ludus nihil his ne, dicunt tractatos ei mea. Has te tale scribentur.
+
+					Ei mucius facete quaeque mea, te nec suas tamquam deserunt. Ius an dolor legere phaedrum, ius summo mnesarchum ei. Sale velit dicant in vis, falli possim commodo vix ea. Vis dicant delicata ne, mea detracto noluisse cu, fuisset scaevola ex vis. Solum suscipit conceptam pro ei, his at aliquam mentitum pertinacia, ad gloriatur mediocritatem mel. Brute clita luptatum eam id, sint augue copiosae ex vim. Deserunt scriptorem te qui, ei lobortis delicatissimi mel, aliquam ponderum honestatis cu vel.
+
+					Ea purto affert percipit vis, decore dignissim liberavisse ad est, te vim tation lucilius. His at nibh errem, ea duo velit indoctum periculis. At consul dissentiet consectetuer eam. Dolorum scribentur efficiantur pro an, ei modo constituto vim. Ex harum mandamus expetenda sea, solet cetero qui te.
+
+					Choro facilis sensibus eu quo, te hinc error vix, ex paulo detracto verterem qui. Ei ullum euismod mel, ludus vitae prompta ad vim. Omnes mucius ocurreret an sit, sit nostro incorrupte an, sed dicam legimus at. Purto salutandi vix no, fugit praesent nec cu. Quot animal ea mei.
+
+					Nam omnis prima ei, mea inermis vocibus ei. Cum veritus explicari an, habeo scripta aliquam in vel, simul verterem recteque no mei. No pro wisi constituam, ex vel legere vocibus postulant. Usu ea ubique intellegat, ei mei propriae constituto, no sea odio inani vituperatoribus. Has epicuri liberavisse no.
+				</div>
+			</div>
+
+			<div class="col-lg-3">
+				<div id="tertiaryArticle">
+					Lorem ipsum dolor sit amet, mei utamur petentium cu. Vero tantas aeterno in eum, ne pro dico indoctum. Meis malis error per in, cibo dissentias ea vis. Ludus nihil his ne, dicunt tractatos ei mea. Has te tale scribentur.
+
+					Ei mucius facete quaeque mea, te nec suas tamquam deserunt. Ius an dolor legere phaedrum, ius summo mnesarchum ei. Sale velit dicant in vis, falli possim commodo vix ea. Vis dicant delicata ne, mea detracto noluisse cu, fuisset scaevola ex vis. Solum suscipit conceptam pro ei, his at aliquam mentitum pertinacia, ad gloriatur mediocritatem mel. Brute clita luptatum eam id, sint augue copiosae ex vim. Deserunt scriptorem te qui, ei lobortis delicatissimi mel, aliquam ponderum honestatis cu vel.
+
+					Ea purto affert percipit vis, decore dignissim liberavisse ad est, te vim tation lucilius. His at nibh errem, ea duo velit indoctum periculis. At consul dissentiet consectetuer eam. Dolorum scribentur efficiantur pro an, ei modo constituto vim. Ex harum mandamus expetenda sea, solet cetero qui te.
+
+					Choro facilis sensibus eu quo, te hinc error vix, ex paulo detracto verterem qui. Ei ullum euismod mel, ludus vitae prompta ad vim. Omnes mucius ocurreret an sit, sit nostro incorrupte an, sed dicam legimus at. Purto salutandi vix no, fugit praesent nec cu. Quot animal ea mei.
+
+					Nam omnis prima ei, mea inermis vocibus ei. Cum veritus explicari an, habeo scripta aliquam in vel, simul verterem recteque no mei. No pro wisi constituam, ex vel legere vocibus postulant. Usu ea ubique intellegat, ei mei propriae constituto, no sea odio inani vituperatoribus. Has epicuri liberavisse no.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					© Copyright NU Boot Camp 2017
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<!-- jQuery CDN -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+<!-- JavaScript -->
+<script type="text/javascript" src="./assets/logic/app.js"></script>
+
+</body>
+</html>

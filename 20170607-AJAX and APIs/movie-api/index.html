@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie API Part Deux</title>
+</head>
+<body>
+	
+
+	<div id="movie-view"></div>
+
+		<form id="movie-form">
+			<label for="movie-input">Search for a movie</label>
+			<input type="text" id="movie-input"><br>
+			<input id="find-movie" type="submit" value="Movie Search">
+		</form>
+
+
+		<!-- jQuery CDN -->
+		<script
+		  src="https://code.jquery.com/jquery-3.2.1.js"
+		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		  crossorigin="anonymous"></script>
+
+		<!-- JavaScript -->
+		<script type="text/javascript">
+
+		$("#find-movie").on("click", function(event) {
+
+			event.preventDefault();
+
+			//prevent default behavior of clicking on submit button
+			var movie = $("#movie-input").val();
+
+			var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=40e9cece";
+
+			$.ajax({
+				url: queryURL,
+				method: "GET"
+			}).done(function(data) {
+				$("#movie-view").html(JSON.stringify(data));
+			});
+		});
+
+		</script>
+	</div>
+</body>
+</html>

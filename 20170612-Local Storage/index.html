@@ -1,0 +1,29 @@
+<sript src="https://code.jquery.com/jquery-2.2.1.min.js"></sript>
+<script type="text/javascript">
+
+	var list = JSON.parse(localStorage.getItem("todoList"));
+
+	if (!Array.isArray(list)) {
+		list = [];
+	}
+
+	function putOnPage() {
+		$("#todo-list").empty(); //empties html
+
+		var insideList = JSON.parse(localStorage.getItem("todolist"));
+
+		//checks to see if we have to dos in Localstorage
+		if (!Array.isArray(insideList)) {
+			insideList = [];
+		}
+
+		for (var i = 0; i < insideList.length; i++) {
+			var p = $("<p>").text(insideList[i]);
+			var b = $("<button class='delete'>").text("x").attr("data-index", i);
+
+			p.prepend(b);
+			$("#todo-list").prepend(p);
+		}
+	}
+
+</script>

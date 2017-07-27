@@ -13,33 +13,55 @@ connection.connect(function(err){
         throw err;
     }
 
-    createData();
+    // createData();
 
     selectData();
 
-    // updateData();
+    updateData();
 
-    // deleteData();
+    deleteData();
 
     connection.end();
 });
 
-// function updateData() {
-//     var query = "UPDATE pets SET columnname=value WHERE id = num";
-//     connection.query(query, function (err, data) {
-//         if (err) throw err;
-//         console.log(data);
-//     });
-// }
+function deleteData() {
+    var query = "DROP ";
+    connection.query(query, function (err, data) {
+        if (err) throw err;
+    });
+}
+
+function updateData() {
+
+    // prepared statement for extra security
+    // blocks SQL injections
+    var query = "UPDATE pets SET ? WHERE ?";
+    connection.query(query, [
+        {
+            name: 'Doggie Dog',
+            id: 5
+        }
+    ], function (err, data) {
+        if (err) throw err;
+
+    // below is unsecure as it is not a prepared statement
+    // var query = "UPDATE pets SET name = 'Doggie Dawggg' WHERE id = 5";
+    // connection.query(query, function (err, data) {
+    //     if (err) throw err;
+    });
+}
 
 function selectData() {
     var query = "SELECT * from pets";
     connection.query(query, function (err, data) {
         if (err) throw err;
         data.forEach(function(row) {
-            
+
             // will display as "1: Doc, Setter"
             console.log(`${row.id}: ${row.name}, ${row.breed}`);
+
+            // will display as "Hello, my ID is: 1. My name is Doc and I am a Setter"
+            // console.log(`Hello, my ID is ${row.id}. My name is {row.name} and I am a {row.breed}`);
         });
     });
 }

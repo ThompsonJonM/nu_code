@@ -19,17 +19,17 @@ connection.connect(function(err){
 
     updateData();
 
-    deleteData();
+    // deleteData();
 
     connection.end();
 });
 
-function deleteData() {
-    var query = "DROP ";
-    connection.query(query, function (err, data) {
-        if (err) throw err;
-    });
-}
+// function deleteData() {
+//     var query = "DROP ";
+//     connection.query(query, function (err, data) {
+//         if (err) throw err;
+//     });
+// }
 
 function updateData() {
 
@@ -38,9 +38,11 @@ function updateData() {
     var query = "UPDATE pets SET ? WHERE ?";
     connection.query(query, [
         {
-            name: 'Doggie Dog',
+            name: 'Doggie Dog'
+        },
+        {   
             id: 5
-        }
+        },
     ], function (err, data) {
         if (err) throw err;
 

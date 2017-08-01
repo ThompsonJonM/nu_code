@@ -3,16 +3,23 @@ var http = require("http");
 var portOne = 7000;
 var portTwo = 7500;
 
-function handleRequest(request, response) {
+function handleRequestOne(request, response) {
     response.end("Request worked! Path hit: " + request.url);
 }
 
-var server = http.createServer(handleRequest);
+function handleRequestTwo(request, response) {
+    response.end("Request worked! Path hit: " + request.url);
+}
 
-server.listen(portOne, function() {
+var serverOne = http.createServer(handleRequestOne);
+var serverTwo = http.createServer(handleRequestTwo);
+
+serverOne.listen(portOne, function() {
     console.log("You are pretty awesome for using this port");
+    console.log("Server listening on: http://localhost:5s", portOne);
 })
 
-server.listen(portTwo, function() {
+serverTwo.listen(portTwo, function() {
     console.log("Are you kidding me? LEAVE AT ONCE!");
+    console.log("Server listening on: http://localhost:5s", portTwo);
 })
